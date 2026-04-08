@@ -36,7 +36,7 @@ public class WheresMyRuin : BaseSettingsPlugin<WheresMyRuinSettings>
         if (ruinBuff == null)
             return null;
 
-        if (ruinBuff.Charges >= Settings.RuinCharges)
+        if (ruinBuff.BuffCharges >= Settings.RuinCharges)
             Quit();
 
         return null;
