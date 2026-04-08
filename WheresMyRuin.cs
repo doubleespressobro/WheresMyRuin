@@ -32,11 +32,11 @@ public class WheresMyRuin : BaseSettingsPlugin<WheresMyRuinSettings>
         if (player == null)
             return null;
 
-        var ruinBuff = player.GetComponent<Buffs>()?.BuffsList.FirstOrDefault(b => b.Name == "gauntlet_ruinbuff");
+        var ruinBuff = player.GetComponent<Buffs>()?.BuffsList.FirstOrDefault(b => b.Name == "gauntlet_ruin");
         if (ruinBuff == null)
             return null;
 
-        if (ruinBuff.BuffCharges >= Settings.RuinCharges)
+        if (ruinBuff.Charges >= Settings.RuinCharges)
             Quit();
 
         return null;
